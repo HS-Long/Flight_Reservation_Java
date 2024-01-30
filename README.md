@@ -6,7 +6,7 @@
 <body>
 
 <h2>FlightApp</h2>
-<p>This is an API project built with Java and MySQL, created as a school assignment.</p>
+<p>This is an API and Web project built with Java and MySQL, created as a school assignment.</p>
 
 <h3>Project Structure</h3>
 <h3>Group 5 Members</h3>
