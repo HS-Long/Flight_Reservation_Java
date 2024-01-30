@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Management System</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Change to your desired background color */
+        }
+
+        .custom-header-color {
+            color: #007BFF;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .custom-table-border {
+            border-color: #007BFF;
+        }
+    </style>
+</head>
+<body style="background-color: lightgray;">
+<div class="container my-2">
+    <h1 class="custom-header-color">Information Passenger</h1>
+
+    <!-- Filter Form -->
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <form th:action="@{/passengers}" method="GET">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Name or Contact Number" id="filterInput" name="search" th:value="${search}" />
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <table border="1" class="table table-striped table-responsive-md">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Contact Number</th>
+            <th>Booking Reference</th>
+            <th>FlightID</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="passenger : ${passengerList}">
+            <td th:text="${passenger.id}"></td>
+            <td th:text="${passenger.name}"></td>
+            <td th:text="${passenger.age}"></td>
+            <td th:text="${passenger.gender}"></td>
+            <td th:text="${passenger.contactNumber}"></td>
+            <td th:text="${passenger.bookingReference}"></td>
+            <td th:text="${passenger.flightid}"></td>
+            <!-- Update and Delete Actions -->
+            <td>
+                <a th:href="@{/passengers/update/{id}(id=${passenger.id})}" class="btn btn-primary">Update</a>
+                <a class="btn btn-danger" th:onclick="'showConfirmationModal('+${passenger.id}+')'">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a th:href="@{/flights}" class="btn  btn-info">Back To flight</a>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!-- JavaScript for Confirmation Modal-->
+<script type="text/javascript">
+    function showConfirmationModal(id) {
+        var confirmation = confirm("Are you sure you want to delete this passenger?");
+        if (confirmation) {
+            window.location.href = "/passengers/delete/" + id;
+        }
+    }
+</script>
+</body>
+</html>

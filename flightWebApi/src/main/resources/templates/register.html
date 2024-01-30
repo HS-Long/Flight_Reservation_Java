@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Your custom styles can go here */
+        body {
+            background-image: url('https://source.unsplash.com/1600x900/?airplane');
+            background-size: cover;
+            background-position: center;
+            margin-top: 50px;
+            color: #130202;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .card-header {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #130202;
+            border-radius: 15px 15px 0 0;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-register {
+            background-color: #28a745; /* Bootstrap success color */
+            border-color: #28a745;
+            border-radius: 5px;
+        }
+        .btn-register:hover {
+            background-color: #218838; /* Darker shade of green */
+            border-color: #218838;
+        }
+        .error-message {
+            color: #dc3545; /* Bootstrap danger color */
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">Register</h3>
+                </div>
+                <div class="card-body">
+                    <!-- Your registration form goes here -->
+                    <form id="registration-form" method="post" action="/register" onsubmit="return validateForm()">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-register btn-block">Register</button>
+                        <div class="error-message" id="registration-error-message"></div>
+                        <div class="card-footer text-center">
+                            <p>Already have an account? <a href="/login">Login here</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

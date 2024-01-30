@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS flights (
+                                       id INT PRIMARY KEY AUTO_INCREMENT,
+                                       flightNumber VARCHAR(10) NOT NULL,
+                                       departureCity VARCHAR(50) NOT NULL,
+                                       destinationCity VARCHAR(50) NOT NULL,
+                                       departureTime VARCHAR(20) NOT NULL,
+                                       arrivalTime VARCHAR(20) NOT NULL,
+                                       availableSeats INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS passengers (
+                                          id INT PRIMARY KEY AUTO_INCREMENT,
+                                          name VARCHAR(100) NOT NULL,
+                                          age INT NOT NULL,
+                                          gender VARCHAR(10) NOT NULL,
+                                          contactNumber VARCHAR(15) NOT NULL,
+                                          bookingReference VARCHAR(20) NOT NULL,
+                                          flightId INT,
+                                          FOREIGN KEY (flightId) REFERENCES flights(id)
+);
+
+
+delete from flights where 1 ;

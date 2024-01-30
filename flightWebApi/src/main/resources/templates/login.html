@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Your custom styles can go here */
+        body {
+            background-image: url('https://source.unsplash.com/1600x900/?airplane'); /* Replace 'flight_background.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            margin-top: 50px;
+            color: #130202; /* Set text color to white for better readability on dark background */
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for card */
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .card-header {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for card header */
+            color: #130202;
+            border-radius: 15px 15px 0 0;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-login {
+            background-color: #1ec458; /* Primary blue */
+            border-color: #007bff;
+            border-radius: 5px;
+        }
+        .btn-login:hover {
+            background-color: #0056b3; /* Darker shade of blue */
+            border-color: #0056b3;
+        }
+        .btn-register {
+            color: #007bff; /* Primary blue */
+        }
+        .btn-register:hover {
+            color: #0056b3; /* Darker shade of blue */
+            text-decoration: none;
+        }
+        .error-message {
+            color: #dc3545; /* Bootstrap danger color */
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">Login</h3>
+                </div>
+                <div class="card-body">
+                    <!-- Your login form goes here -->
+                    <form id="login-form" method="post" action="/login">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-login btn-block">Login</button>
+                        <div class="error-message" id="login-error-message"></div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <p>Don't have an account? <a href="/register" class="btn-register">Register here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

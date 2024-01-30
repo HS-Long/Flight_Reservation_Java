@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Head content -->
+
+    <title>Flight Management System</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body style="background-color: lightgray;">
+<div class="container my-2">
+    <h1 style="text-align: center">Update Passenger</h1>
+
+    <!-- Form to update an existing passenger with flight selection -->
+    <form action="#" th:action="@{/passengers/create}" method="POST" th:object="${passenger}">
+        <div class="form-group">
+            <input type="hidden" th:field="*{id}" />
+            <label>Passenger name</label>
+            <input type="text" th:field="*{name}" class="form-control" placeholder="Passenger name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Age</label>
+            <input type="text" th:field="*{age}" class="form-control" placeholder="Age" required>
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+            <input type="text" th:field="*{gender}" class="form-control" placeholder="Gender" required>
+        </div>
+
+        <div class="form-group">
+            <label>Contact number</label>
+            <input type="text" th:field="*{contactNumber}" class="form-control" placeholder="Contact number" required>
+        </div>
+        <div class="form-group">
+            <label>BookingReference</label>
+            <input type="text" th:field="*{bookingReference}" class="form-control" placeholder="BookingReference" required>
+        </div>
+
+        <div class="form-group">
+            <label>FlightId</label>
+            <input type="text" th:field="*{flightid}" class="form-control" placeholder="Flight Number" required>
+        </div>
+
+        <button type="submit" class="btn btn-info">Update Passenger</button>
+        <a th:href="@{/passengers}" class="btn  btn-info">Back To Passenger</a>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- Additional scripts and dependencies -->
+</body>
+</html>
