@@ -20,7 +20,7 @@ public class Main {
             System.out.println("| 3. Make Reservation                    |");
             System.out.println("| 4. Cancel Reservation                  |");
             System.out.println("+----------------------------------------+");
-            System.out.println("|   ==> For User Controll     <==        |");
+            System.out.println("|   ==> For Admin Controll     <==       |");
             System.out.println("+----------------------------------------+");
             System.out.println("| 5. Display Passenger Details           |");
             System.out.println("| 6. Show All Passengers                 |");
