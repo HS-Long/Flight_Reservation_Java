@@ -5,13 +5,13 @@
 </head>
 <body>
 
-<h2 style = "text-alight-center">FlightApp</h2>
+<h2 style="text-align: center;">FlightApp</h2>
 <p>This is an API and Web project built with Java and MySQL, created as a school assignment.</p>
 
-<h3>Project Structure</h3>
-<h3>Group 5 Members</h3>
+<h3 style="text-align: center;">Project Structure</h3>
+<h3 style="text-align: center;">Group 5 Members</h3>
 
-<table>
+<table style="margin:auto;">
   <thead>
     <tr>
       <th>Name</th>
@@ -27,29 +27,29 @@
       <td>e20210329</td>
        <td>AMS-Y3</td>
     </tr>
-        <tr>
+    <tr>
       <td>CHAN Sophara</td>
-          <td>Male</td>
+      <td>Male</td>
       <td>e20211081</td>
-           <td>AMS-Y3</td>
+      <td>AMS-Y3</td>
     </tr>
-      <tr>
+    <tr>
       <td>CHHRAN Moses</td>
-        <td>Male</td>
+      <td>Male</td>
       <td>e20210294</td>
-         <td>AMS-Y3</td>
+      <td>AMS-Y3</td>
     </tr>
-        <tr>
+    <tr>
       <td>CHHORN Solita </td>
-          <td>Female</td>
+      <td>Female</td>
       <td>e20210537</td>
-           <td>AMS-Y3</td>
+      <td>AMS-Y3</td>
     </tr>
-          <tr>
+    <tr>
       <td>CHEA Piseth </td>
-            <td>Male</td>
+      <td>Male</td>
       <td>e20210871</td>
-             <td>AMS-Y3</td>
+      <td>AMS-Y3</td>
     </tr>
   </tbody>
 </table>
