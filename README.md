@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<h2>FlightApp</h2>
+<h2 style = "text-alight-center">FlightApp</h2>
 <p>This is an API and Web project built with Java and MySQL, created as a school assignment.</p>
 
 <h3>Project Structure</h3>
