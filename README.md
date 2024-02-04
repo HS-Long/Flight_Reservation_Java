@@ -8,7 +8,6 @@
 <h2 style="text-align: center;">FlightApp</h2>
 <p>This is an API and Web project built with Java and MySQL, created as a school assignment.</p>
 
-<h3 style="text-align: center;">Project Structure</h3>
 <h3 style="text-align: center;">Group 5 Members</h3>
 
 <table style="margin:auto;">
